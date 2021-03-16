@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+    <link href="https://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+    <script src="https://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <title>03-交互</title>
+</head>
+
+<style>
+    body {
+        font-size: 12px;
+        font-family: Arial;
+    }
+
+    a {
+        color: #999;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #C40000;
+    }
+
+    div.buyPageDiv {
+        margin: 20px auto;
+        max-width: 1013px;
+    }
+
+    div.orderItemSumDiv span {
+        color: #999999;
+    }
+
+    span.leaveMessageTextareaSpan {
+        display: inline-block;
+    }
+
+    textarea.leaveMessageTextarea {
+        border: 1px solid #FFAD35;
+        width: 250px;
+        height: 60px;
+        resize: none;
+    }
+
+    div.orderItemSumDiv {
+        padding: 20px;
+        border-top: 2px solid #B4D0FF;
+        background-color: #F2F6FF;
+        height: 50px;
+    }
+
+    span.leaveMessageText {
+        display: inline-block;
+        margin-right: 10px;
+        float: left;
+    }
+</style>
+<script>
+    $(function () {
+        $("img.leaveMessageImg").click(function () {
+            $(this).hide();
+            $("span.leaveMessageTextareaSpan").show();
+            $("div.orderItemSumDiv").css("height", "100px");
+        });
+    });
+</script>
+<body>
+<div class="buyPageDiv">
+    <div class="productList">
+        <div class="orderItemSumDiv">
+            <div class="pull-left">
+                <span class="leaveMessageText">给卖家留言:</span>
+                <span>
+                    <img src="https://how2j.cn/tmall/img/site/leaveMessage.png" class="leaveMessageImg">
+                </span>
+                <span class="leaveMessageTextareaSpan" style="display: none;">
+                    <textarea class="leaveMessageTextarea" name="userMessage"></textarea>
+                    <div>
+                        <span>还可以输入200个字符</span>
+                    </div>
+                </span>
+            </div>
+            <span class="pull-right">店铺合计(含运费): ￥9,152.25</span>
+        </div>
+    </div>
+</div>
+<div style="height:100px"></div>
+
+</body>
+</html>
